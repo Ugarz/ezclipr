@@ -1,0 +1,21 @@
+{
+  "name": "ezclipr",
+  "version": "0.0.1",
+  "description": "Easy manage content",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ez",
+    "clip",
+    "twitch",
+    "broadcast",
+    "content"
+  ],
+  "author": "ugo.arzur@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
