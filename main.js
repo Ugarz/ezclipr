@@ -1,10 +1,15 @@
-const fetch = require('node-fetch');
-const baseUrl = "https://api.twitch.tv";
+require('dotenv').config();
 
-fetch('https://httpbin.org/post', {
-        method: 'post',
-        body:    JSON.stringify(body),
-        headers: { 'Content-Type': 'application/json' },
-    })
-    .then(res => res.json())
-    .then(json => console.log(json));
+const fs = require('fs');
+const fetch = require('node-fetch');
+
+const { fetchClips } = require('./helpers/clips')
+
+fetch(
+  'https://assets-cdn.github.com/images/modules/logos_page/Octocat.png'
+).then(res => {
+  const dest = fs.createWriteStream('./octocat.png');
+  res.body.pipe(dest);
+});
+
+fetchClips()
